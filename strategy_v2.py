@@ -70,12 +70,6 @@ class MACDStrategy(Strategy):
         MACDStrategy.signal_events.append(
             (current_bar, "LOG", position_val, macd_val, signal_val, current_price)
         )
-        # logger.info(
-        #     f"next LOG: {current_bar} | {current_price} | {position_val} | {macd_val} | {signal_val}"
-        # )
-        # logger.info(
-        #     f"next: self.signal_events id={id(MACDStrategy.signal_events)} len={len(MACDStrategy.signal_events)}"
-        # )
 
         if self.position:
             bars_since_entry = current_bar - self.entry_bar

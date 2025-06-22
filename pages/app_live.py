@@ -31,6 +31,8 @@ import threading
 import time
 from typing import Optional
 
+from backend import get_connection, fetch_orders
+
 
 st.set_page_config(
     page_title="Upbit Live Trading Bot v1", page_icon="🤖", layout="wide"
@@ -102,7 +104,9 @@ from config import MIN_CASH, MIN_FEE_RATIO
 
 params = st.query_params
 virtual_krw = int(params.get("virtual_krw", 0))
+user_id = params.get("user_id", "")
 # st.write(f"가상 보유자산: {virtual_krw:,} KRW")
+# st.write(f"User ID: {user_id}")
 if virtual_krw < MIN_CASH:
     st.switch_page("pages/select_test.py")
 
@@ -545,7 +549,7 @@ def main() -> None:
     test_mode = True
     st.session_state["test_mode"] = test_mode
 
-    st.title("🤖 Upbit Live Trading Bot v1 (TEST)")
+    st.title(f"🤖 Upbit Live Trading Bot v1 (TEST) - {user_id}")
 
     params = make_sidebar()
 
