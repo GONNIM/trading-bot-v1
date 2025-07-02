@@ -31,8 +31,6 @@ import threading
 import time
 from typing import Optional
 
-from backend import get_connection, fetch_orders
-
 
 st.set_page_config(
     page_title="Upbit Live Trading Bot v1", page_icon="🤖", layout="wide"
