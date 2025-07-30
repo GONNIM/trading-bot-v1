@@ -9,10 +9,10 @@ if "selected_site" not in st.session_state:
 
 # Page Config
 st.set_page_config(
-    page_title="Upbit Live Trading Bot v1", page_icon="🤖", layout="wide"
+    page_title="Upbit Strategy BACKTEST", page_icon="🤖", layout="wide"
 )
 
-st.title("🤖 Upbit Live Trading Bot v1")
+st.title("🤖 Upbit Strategy BACKTEST")
 
 # Header Section
 st.markdown(style_main, unsafe_allow_html=True)
@@ -69,7 +69,7 @@ else:
     <div class="site-card">
         <div class="site-name">상단의 사이트를 선택해 주세요!</div>
         <div class="site-description">대박이 납니다!!!</div>
-        <!-- <a href="#" target="_self" class="site-link">🤖 Upbit Live Trading Bot</a> //-->
+        <!-- <a href="#" target="_self" class="site-link">🤖 Upbit Strategy BACKTEST</a> //-->
     </div>
     """
     st.markdown(site_card, unsafe_allow_html=True)
@@ -77,7 +77,7 @@ else:
 # Footer
 st.write("")
 st.markdown(
-    '<div class="footer"><p>© Upbit Live Trading Bot</p></div>', unsafe_allow_html=True
+    '<div class="footer"><p>© Upbit Strategy BACKTEST</p></div>', unsafe_allow_html=True
 )
 
 st.markdown(
