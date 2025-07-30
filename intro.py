@@ -27,18 +27,10 @@ sites = {
         "description": "📈 업비트 자동매매 백테스트 - MACD, EMA v2",
         "link": "https://llm-trading-v2.streamlit.app/",
     },
-    "TRADING-BOT-TEST": {
-        "description": "🤖 Upbit Live Trading Bot - Test",
-        "link": "pages/select_test.py",
-    },
-    "TRADING-BOT-REAL": {
-        "description": "🤖 Upbit Live Trading Bot - Real",
-        "link": "pages/app_live_real.py",
-    },
 }
 
 selected_site = None
-columns = st.columns(4)
+columns = st.columns(len(sites))
 
 for i, (site, info) in enumerate(sites.items()):
     if columns[i].button(site, key=site):
